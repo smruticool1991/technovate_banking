@@ -1,0 +1,109 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { ContactComponent } from './contact/contact.component';
+import { CreditComponent } from './credit/credit.component';
+import { HomeComponent } from './home/home.component';
+import { InstantloanComponent } from './instantloan/instantloan.component';
+import { CryptoComponent } from './investment/crypto/crypto.component';
+import { DematComponent } from './investment/demat/demat.component';
+import { FixeddepositComponent } from './investment/fixeddeposit/fixeddeposit.component';
+import { MutualfundComponent } from './investment/mutualfund/mutualfund.component';
+import { BusinessloanComponent } from './loan/businessloan/businessloan.component';
+import { CarloanComponent } from './loan/carloan/carloan.component';
+import { EducationloanComponent } from './loan/educationloan/educationloan.component';
+import { HomeloanComponent } from './loan/homeloan/homeloan.component';
+import { PersonalloanComponent } from './loan/personalloan/personalloan.component';
+import { TwowheelerloanComponent } from './loan/twowheelerloan/twowheelerloan.component';
+import { UnsecuredloanComponent } from './loan/unsecuredloan/unsecuredloan.component';
+import { UsedcarloanComponent } from './loan/usedcarloan/usedcarloan.component';
+import { SavingComponent } from './saving/saving.component';
+
+const routes: Routes = [
+  {
+    path : '',
+    component: HomeComponent
+ },
+ {
+   path: 'contact',
+   component: ContactComponent
+ },
+ {
+   path: 'credit-card',
+   component: CreditComponent
+ },
+ {
+   path: 'saving-account',
+   component: SavingComponent
+ },
+ {
+   path: 'loan',
+   children: [
+     {
+       path: 'home-loan',
+       component: HomeloanComponent
+     },
+     {
+      path: 'personal-loan',
+      component: PersonalloanComponent
+    },
+    {
+      path: 'business-loan',
+      component: BusinessloanComponent
+    },
+    {
+      path: 'car-loan',
+      component: CarloanComponent
+    },
+    {
+      path: 'education-loan',
+      component: EducationloanComponent
+    },
+    {
+      path: 'twowheeler-loan',
+      component: TwowheelerloanComponent
+    },
+    {
+      path: 'usedcar-loan',
+      component: UsedcarloanComponent
+    },
+    {
+      path: 'unsecured-loan',
+      component: UnsecuredloanComponent
+    }
+
+   ]
+ },
+ {
+   path: 'instant-loan',
+   component: InstantloanComponent
+ },
+ {
+   path: 'investment',
+   children: [
+     {
+       path: 'mutual-fund',
+       component: MutualfundComponent
+     },
+     {
+       path: 'demat',
+       component: DematComponent
+     },
+     {
+       path: 'fixed-deposits',
+       component: FixeddepositComponent
+     },
+     {
+       path: 'crypto',
+       component: CryptoComponent
+     }
+   ]
+
+ }
+ 
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
