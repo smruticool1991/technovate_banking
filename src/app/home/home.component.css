@@ -1,0 +1,73 @@
+.circle-icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    margin-left: -25px;
+    color: var(--blue-color);
+    transition: .4s all;
+}
+.arrow{
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #3454d1;
+    border-bottom: 2px solid #3454d1;
+    transform: rotate(225deg);
+    margin-right: 4px;
+}
+.card-i{
+    height: 200px;
+}
+.img-parent{
+    padding: 20px; 
+    height: 120px;
+    border: 1px solid #d4d0d0;
+    border-radius: 20px;
+}
+.carousel{
+    background-color: #f1f1f1;
+}
+
+.search{
+    background-color: #f4f4fa;
+    padding: 15px 10px 0px 10px;
+    border-radius: 10px;
+
+}
+mat-form-field{
+    width: 100%;
+    
+}
+mat-card{
+    box-shadow: 0px 10px 20px red;
+    background-color: #f6f6f8;
+}
+example-card{
+    border: 1px solid #dee2e6;
+}
+
+::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important;}
+::ng-deep .mat-form-field-label-wrapper { top: -1.5em; }
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    transform: translateY(-1.1em) scale(.75);
+    width: 133.33333%;
+}
+mat-card-title{
+    font-size: 20px;
+}
+mat-card-subtitle{
+    font-weight: 500;
+}
+.form-main{
+    background-color: #f9f7fd;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #cecccc;
+}

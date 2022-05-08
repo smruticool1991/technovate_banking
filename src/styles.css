@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+a{
+    text-decoration: none;
+}
+.navbar{
+    background-color: #fbfbfb!important;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+}
+.navbar-soft .navbar-nav .nav-item .nav-link {
+    padding: 1rem 0.5rem!important;
+}
+
+
+
+.search{
+    background-color: #f4f4fa;
+    padding: 15px 10px 0px 10px;
+    border-radius: 10px;
+
+}
+mat-form-field{
+    width: 100%;
+    
+}
+mat-card{
+    box-shadow: 0px 10px 20px red;
+    background-color: #f6f6f8;
+}
+example-card{
+    border: 1px solid #dee2e6;
+}
+
