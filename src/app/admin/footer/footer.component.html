@@ -1,0 +1,34 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side" opened *ngIf="isLogedin == true">
+    <mat-card class="example-card text-center" >
+      <mat-selection-list  [multiple]="false" style="margin-top: 60px;">
+           <mat-list-option routerLink="/dashboard">
+              <mat-icon class="icon" >widgets</mat-icon><span>Dashboard</span>
+           </mat-list-option>
+           <mat-list-option>
+               <mat-icon class="icon">how_to_reg</mat-icon><span mat-button  [matMenuTriggerFor]="animals">Details +</span>
+                <mat-menu #animals="matMenu" xPosition="before">
+                  <button mat-menu-item routerLink="/student/add">Add</button>
+                  <button mat-menu-item routerLink="/student/view">View</button>
+                </mat-menu>
+           </mat-list-option>
+           <mat-list-option>
+             <mat-icon class="icon">assistant</mat-icon>Section1
+           </mat-list-option>
+           <mat-list-option>
+             <mat-icon class="icon">border_color</mat-icon>Section2
+           </mat-list-option>
+           <mat-list-option>
+             <mat-icon class="icon" > score</mat-icon>Section3
+           </mat-list-option>
+           <mat-list-option>
+             <mat-icon class="icon">keyboard_arrow_right</mat-icon>Section4
+           </mat-list-option>
+           <mat-list-option>
+               
+           </mat-list-option>
+        </mat-selection-list>
+    </mat-card>
+    </mat-drawer>
+     <router-outlet></router-outlet>
+    </mat-drawer-container>

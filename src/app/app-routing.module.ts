@@ -4,18 +4,8 @@ import { ContactComponent } from './contact/contact.component';
 import { CreditComponent } from './credit/credit.component';
 import { HomeComponent } from './home/home.component';
 import { InstantloanComponent } from './instantloan/instantloan.component';
-import { CryptoComponent } from './investment/crypto/crypto.component';
-import { DematComponent } from './investment/demat/demat.component';
-import { FixeddepositComponent } from './investment/fixeddeposit/fixeddeposit.component';
-import { MutualfundComponent } from './investment/mutualfund/mutualfund.component';
-import { BusinessloanComponent } from './loan/businessloan/businessloan.component';
-import { CarloanComponent } from './loan/carloan/carloan.component';
-import { EducationloanComponent } from './loan/educationloan/educationloan.component';
-import { HomeloanComponent } from './loan/homeloan/homeloan.component';
-import { PersonalloanComponent } from './loan/personalloan/personalloan.component';
-import { TwowheelerloanComponent } from './loan/twowheelerloan/twowheelerloan.component';
-import { UnsecuredloanComponent } from './loan/unsecuredloan/unsecuredloan.component';
-import { UsedcarloanComponent } from './loan/usedcarloan/usedcarloan.component';
+
+
 import { SavingComponent } from './saving/saving.component';
 
 const routes: Routes = [
@@ -37,41 +27,7 @@ const routes: Routes = [
  },
  {
    path: 'loan',
-   children: [
-     {
-       path: 'home-loan',
-       component: HomeloanComponent
-     },
-     {
-      path: 'personal-loan',
-      component: PersonalloanComponent
-    },
-    {
-      path: 'business-loan',
-      component: BusinessloanComponent
-    },
-    {
-      path: 'car-loan',
-      component: CarloanComponent
-    },
-    {
-      path: 'education-loan',
-      component: EducationloanComponent
-    },
-    {
-      path: 'twowheeler-loan',
-      component: TwowheelerloanComponent
-    },
-    {
-      path: 'usedcar-loan',
-      component: UsedcarloanComponent
-    },
-    {
-      path: 'unsecured-loan',
-      component: UnsecuredloanComponent
-    }
-
-   ]
+   loadChildren: () => import('./loan/loan.module').then(url => url.LoanModule)
  },
  {
    path: 'instant-loan',
@@ -79,25 +35,11 @@ const routes: Routes = [
  },
  {
    path: 'investment',
-   children: [
-     {
-       path: 'mutual-fund',
-       component: MutualfundComponent
-     },
-     {
-       path: 'demat',
-       component: DematComponent
-     },
-     {
-       path: 'fixed-deposits',
-       component: FixeddepositComponent
-     },
-     {
-       path: 'crypto',
-       component: CryptoComponent
-     }
-   ]
-
+   loadChildren: () => import('./investment/investment.module').then(url=> url.InvestmentModule)
+ },
+ {
+   path: 'admin',
+   loadChildren: () => import('./admin/admin.module').then(url=>url.AdminModule)
  }
  
 ];

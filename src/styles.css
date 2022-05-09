@@ -32,4 +32,23 @@ mat-card{
 example-card{
     border: 1px solid #dee2e6;
 }
+::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important;}
+::ng-deep .mat-form-field-label-wrapper { top: -1.5em; }
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    transform: translateY(-1.1em) scale(.75);
+    width: 133.33333%;
+}
+mat-card-title{
+    font-size: 20px;
+}
+mat-card-subtitle{
+    font-weight: 500;
+}
+.form-main{
+    background-color: #f9f7fd;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #cecccc;
+}
 
