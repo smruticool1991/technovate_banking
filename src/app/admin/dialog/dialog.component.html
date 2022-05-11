@@ -1,0 +1,17 @@
+
+<h2 mat-dialog-title>Update Bank Name</h2>
+<mat-dialog-content class="mat-typography">
+    <form action="">
+        <div class="d-flex">
+            <mat-form-field appearance="outline" class="mr-3">
+                <mat-label>Bank Name</mat-label>
+                <input matInput>
+            </mat-form-field>
+            
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button [mat-dialog-close]="true" color="primary" cdkFocusInitial>Update</button>
+</mat-dialog-actions>

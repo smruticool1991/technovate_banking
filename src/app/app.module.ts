@@ -14,6 +14,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SavingComponent } from './saving/saving.component';
 import { InstantloanComponent } from './instantloan/instantloan.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,9 @@ import { DialogComponent } from './dialog/dialog.component';
     BrowserAnimationsModule,
     MaterialModule,
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
+    HttpClientModule
+    
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],

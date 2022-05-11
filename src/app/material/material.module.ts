@@ -16,6 +16,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatTableModule} from '@angular/material/table';
 const Material = [
   MatToolbarModule,
   MatIconModule,
@@ -32,7 +33,8 @@ const Material = [
   MatRadioModule,
   MatTooltipModule,
   MatSidenavModule,
-  MatMenuModule
+  MatMenuModule,
+  MatTableModule
 ]
 @NgModule({
   declarations: [],

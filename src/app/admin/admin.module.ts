@@ -9,7 +9,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { AdminComponent } from './admin.component';
-
+import {FormsModule} from '@angular/forms';
+import { BankComponent } from './bank/bank.component';
+import { DialogComponent } from './dialog/dialog.component';
 @NgModule({
   declarations: [
     LoginComponent,
@@ -17,12 +19,16 @@ import { AdminComponent } from './admin.component';
     NavbarComponent,
     SidebarComponent,
     FooterComponent,
-    AdminComponent
+    AdminComponent,
+    BankComponent,
+    DialogComponent
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    MaterialModule
-  ]
+    MaterialModule,
+    FormsModule
+  ],
+  bootstrap: [AdminComponent]
 })
 export class AdminModule { }

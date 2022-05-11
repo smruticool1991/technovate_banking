@@ -5,16 +5,16 @@
     <div class="text-center mt-4 name">
         CreditMobi
     </div>
-    <form class="p-3 mt-3">
+    <form class="p-3 mt-3" #heroform="ngForm" (ngSubmit)="submit(heroform)">
         <div class="form-field d-flex align-items-center">
             <!-- <span class="fa fa-user"></span> -->
-            <input type="text" name="userName" id="userName" placeholder="Username">
+            <input type="text" name="name" id="userName" placeholder="Username" ngModel>
         </div>
         <div class="form-field d-flex align-items-center">
             <!-- <span class="fa fa-key"></span> -->
-            <input type="password" name="password" id="pwd" placeholder="Password">
+            <input type="password" name="pass" id="pwd" placeholder="Password" ngModel>
         </div>
-        <button class="btn mt-3">Login</button>
+        <button type="submit" class="btn mt-3">Login</button>
     </form>
     <div class="text-center fs-6">
         <a href="#">Forget password?</a> or <a href="#">Sign up</a>

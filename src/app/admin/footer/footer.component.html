@@ -6,10 +6,13 @@
               <mat-icon class="icon" >widgets</mat-icon><span>Dashboard</span>
            </mat-list-option>
            <mat-list-option>
-               <mat-icon class="icon">how_to_reg</mat-icon><span mat-button  [matMenuTriggerFor]="animals">Details +</span>
+               <mat-icon class="icon">how_to_reg</mat-icon><span mat-button  [matMenuTriggerFor]="animals"> Credit Card+</span>
                 <mat-menu #animals="matMenu" xPosition="before">
-                  <button mat-menu-item routerLink="/student/add">Add</button>
-                  <button mat-menu-item routerLink="/student/view">View</button>
+                  <button mat-menu-item routerLink="/student/add">Add Credit Card</button>
+                  <button mat-menu-item routerLink="/student/add">Manage Bank</button>
+                  <button mat-menu-item routerLink="/student/view">Manage Interest Rate</button>
+                  <button mat-menu-item routerLink="/student/view">Manage Processing Fee</button>
+                  <button mat-menu-item routerLink="/student/view">Manage Tenure Range</button>
                 </mat-menu>
            </mat-list-option>
            <mat-list-option>
@@ -30,5 +33,5 @@
         </mat-selection-list>
     </mat-card>
     </mat-drawer>
-     <router-outlet></router-outlet>
+     <router-outlet name="two"></router-outlet>
     </mat-drawer-container>
