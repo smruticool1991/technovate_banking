@@ -1,7 +1,7 @@
 
-<h2 mat-dialog-title>Update Bank Name</h2>
+<h2 mat-dialog-title>Add Bank Name</h2>
 <mat-dialog-content class="mat-typography">
-    <form action="" #update="ngForm" >
+    <form action="" #add="ngForm" >
         <div class="d-flex">
             <mat-form-field appearance="outline" class="mr-3 d-none">
                 <mat-label>Id</mat-label>
@@ -17,5 +17,5 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-raised-button mat-dialog-close color="primary" (click)="update_data(update.value)">Update</button>
+  <button mat-raised-button mat-dialog-close color="primary" (click)="add_data(add.value)">Add</button>
 </mat-dialog-actions>

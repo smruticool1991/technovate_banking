@@ -12,6 +12,8 @@ import { AdminComponent } from './admin.component';
 import {FormsModule} from '@angular/forms';
 import { BankComponent } from './bank/bank.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { AdddialogComponent } from './bank/adddialog/adddialog.component';
+import { InterestComponent } from './bank/interest/interest.component';
 @NgModule({
   declarations: [
     LoginComponent,
@@ -21,7 +23,9 @@ import { DialogComponent } from './dialog/dialog.component';
     FooterComponent,
     AdminComponent,
     BankComponent,
-    DialogComponent
+    DialogComponent,
+    AdddialogComponent,
+    InterestComponent
   ],
   imports: [
     CommonModule,
