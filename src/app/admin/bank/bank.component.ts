@@ -22,6 +22,7 @@ export class BankComponent implements OnInit {
   }
 
   ngOnInit(): void {
+      this._spinner.spinner.next(true)
       this._bankService.get().subscribe(data=>{
          this._bankService.data.next(data)
       },error=>{

@@ -1,3 +1,4 @@
+<mat-spinner *ngIf="spinner"></mat-spinner>
 <div class="wrapper">
     <div class="logo">
         <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt="">
@@ -8,11 +9,11 @@
     <form class="p-3 mt-3" #heroform="ngForm" (ngSubmit)="submit(heroform)">
         <div class="form-field d-flex align-items-center">
             <!-- <span class="fa fa-user"></span> -->
-            <input type="text" name="name" id="userName" placeholder="Username" ngModel>
+            <input type="text" name="name" id="userName" placeholder="Username" ngModel required>
         </div>
         <div class="form-field d-flex align-items-center">
             <!-- <span class="fa fa-key"></span> -->
-            <input type="password" name="pass" id="pwd" placeholder="Password" ngModel>
+            <input type="password" name="pass" id="pwd" placeholder="Password" ngModel required>
         </div>
         <button type="submit" class="btn mt-3">Login</button>
     </form>

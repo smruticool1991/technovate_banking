@@ -15,6 +15,7 @@ import { SavingComponent } from './saving/saving.component';
 import { InstantloanComponent } from './instantloan/instantloan.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,

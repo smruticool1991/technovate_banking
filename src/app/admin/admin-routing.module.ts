@@ -4,7 +4,7 @@ import { AdminComponent } from './admin.component';
 import { BankComponent } from './bank/bank.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
-
+import { AuthGuard } from '../auth.guard';
 const routes: Routes = [
   {
     path: 'login',
@@ -21,6 +21,7 @@ const routes: Routes = [
   {
     path: 'bank',
     component: BankComponent,
+    canActivate: [AuthGuard]
   }
 ];
 

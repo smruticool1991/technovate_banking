@@ -2,14 +2,16 @@
     <mat-drawer #drawer class="example-sidenav" mode="side" opened *ngIf="isLogedin == true">
     <mat-card class="example-card text-center" >
       <mat-selection-list  [multiple]="false" style="margin-top: 60px;">
-           <mat-list-option routerLink="/dashboard">
+           <mat-list-option routerLink="/admin/dashboard">
               <mat-icon class="icon" >widgets</mat-icon><span>Dashboard</span>
            </mat-list-option>
+           <mat-list-option routerLink="/admin/bank">
+            <mat-icon class="icon">assistant</mat-icon>Manage Bank
+          </mat-list-option>
            <mat-list-option>
                <mat-icon class="icon">how_to_reg</mat-icon><span mat-button  [matMenuTriggerFor]="animals"> Credit Card+</span>
                 <mat-menu #animals="matMenu" xPosition="before">
-                  <button mat-menu-item routerLink="/student/add">Add Credit Card</button>
-                  <button mat-menu-item routerLink="/admin/bank">Manage Bank</button>
+                  <button mat-menu-item routerLink="/student/add">Manage Credit Card</button>
                   <button mat-menu-item routerLink="/student/view">Manage Interest Rate</button>
                   <button mat-menu-item routerLink="/student/view">Manage Processing Fee</button>
                   <button mat-menu-item routerLink="/student/view">Manage Tenure Range</button>
