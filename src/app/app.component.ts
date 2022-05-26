@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
+import { SpinnerService } from './services/spinner.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,8 +8,12 @@ import { Location } from '@angular/common';
 })
 export class AppComponent {
   url:any
-  constructor( private location: Location){
+  header:any
+  constructor( private location: Location, public spinner: SpinnerService){
     this.url = this.location.path();
+    this.spinner.header_control.subscribe((data)=>{
+       this.header = data
+    })
      //console.log(this.location.path())
   }
 

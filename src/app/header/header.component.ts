@@ -13,6 +13,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
   admin(){
-     window.location.href = "/admin/login"
+     window.location.href = "http://162.241.118.120/credit-mobi-website/#/admin/login"
   }
 }

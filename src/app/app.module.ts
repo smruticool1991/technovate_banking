@@ -16,6 +16,7 @@ import { InstantloanComponent } from './instantloan/instantloan.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { Config } from './config/config';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},Config],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

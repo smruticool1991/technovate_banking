@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SpinnerService } from 'src/app/services/spinner.service';
 // import * as Chartist from 'chartist';
 @Component({
   selector: 'app-dashboard',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _spinner:SpinnerService) { 
+    this._spinner.header_control.next(false)
+  }
 
   ngOnInit(): void {
   }
+
 }

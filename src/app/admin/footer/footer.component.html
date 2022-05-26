@@ -9,18 +9,47 @@
             <mat-icon class="icon">assistant</mat-icon>Manage Bank
           </mat-list-option>
            <mat-list-option>
-               <mat-icon class="icon">how_to_reg</mat-icon><span mat-button  [matMenuTriggerFor]="animals"> Credit Card+</span>
+               <mat-icon class="icon">assistant</mat-icon><span mat-button  [matMenuTriggerFor]="animals"> Credit Card+</span>
                 <mat-menu #animals="matMenu" xPosition="before">
-                  <button mat-menu-item routerLink="/student/add">Manage Credit Card</button>
-                  <button mat-menu-item routerLink="/student/view">Manage Interest Rate</button>
-                  <button mat-menu-item routerLink="/student/view">Manage Processing Fee</button>
-                  <button mat-menu-item routerLink="/student/view">Manage Tenure Range</button>
+                  <button mat-menu-item routerLink="/admin/credit">Manage Credit Card</button>
+                  <button mat-menu-item (click)="open_credit_dialog()">Add Credit Card</button>
+                  <!-- <button mat-menu-item routerLink="/student/view">Manage Processing Fee</button>
+                  <button mat-menu-item routerLink="/student/view">Manage Tenure Range</button> -->
                 </mat-menu>
            </mat-list-option>
            <mat-list-option>
-             <mat-icon class="icon">assistant</mat-icon>Section1
-           </mat-list-option>
-           <mat-list-option>
+            <mat-icon class="icon">how_to_reg</mat-icon><span mat-button  [matMenuTriggerFor]="animals1"> Savings Account +</span>
+             <mat-menu #animals1="matMenu" xPosition="before">
+              <button mat-menu-item routerLink="/admin/savings">Manage Savings Account</button>
+               <button mat-menu-item (click)="saving_dialog()">Add Savings Account</button>
+               <!-- <button mat-menu-item routerLink="/student/view">Manage Minimum Balance</button>
+               <button mat-menu-item routerLink="/student/view">Manage Processing Fee</button>
+               <button mat-menu-item routerLink="/student/view">Interest Rate</button> -->
+             </mat-menu>
+        </mat-list-option>
+        
+        <mat-list-option>
+          <mat-icon class="icon">border_color</mat-icon><span mat-button  [matMenuTriggerFor]="animals2"> Loan +</span>
+           <mat-menu #animals2="matMenu" xPosition="before">
+            <button mat-menu-item routerLink="/admin/loan">Manage Loan</button>
+             <button mat-menu-item (click)="open_loan_dialog()">Add Loan</button>
+             <button mat-menu-item routerLink="/admin/loan-type">Manage Loan Type</button>
+             <!-- <button mat-menu-item routerLink="/student/view">Manage Processing Fee</button>
+             <button mat-menu-item routerLink="/student/view">Interest Rate</button> -->
+           </mat-menu>
+        </mat-list-option>
+
+        <mat-list-option>
+          <mat-icon class="icon">score</mat-icon><span mat-button  [matMenuTriggerFor]="animals3"> Investment +</span>
+           <mat-menu #animals3="matMenu" xPosition="before">
+            <button mat-menu-item routerLink="/admin/investment">Manage Investment</button>
+             <button mat-menu-item routerLink="/admin/mutual">Manage Mutual Fund</button>
+             <button mat-menu-item routerLink="/admin/demat">Manage Demat</button>
+             <button mat-menu-item routerLink="/admin/fixed">Manage Fixed Deposit</button>
+             <button mat-menu-item routerLink="/admin/crypto">Manage Crypto</button>
+           </mat-menu>
+        </mat-list-option>
+           <!-- <mat-list-option>
              <mat-icon class="icon">border_color</mat-icon>Section2
            </mat-list-option>
            <mat-list-option>
@@ -28,7 +57,7 @@
            </mat-list-option>
            <mat-list-option>
              <mat-icon class="icon">keyboard_arrow_right</mat-icon>Section4
-           </mat-list-option>
+           </mat-list-option> -->
            <mat-list-option>
                
            </mat-list-option>

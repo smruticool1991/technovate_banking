@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   constructor(private _userService: UserService, public router:Router, public _spinner: SpinnerService) { }
 
   ngOnInit(): void {
+    this._spinner.header_control.next(false)
       this._spinner.spinner.subscribe(data=>{
         this.spinner = data
       })

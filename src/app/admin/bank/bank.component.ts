@@ -18,7 +18,8 @@ export class BankComponent implements OnInit {
   constructor(public _bankService: BankService, public dialog: MatDialog, public _spinner: SpinnerService) { 
        this._spinner.spinner.subscribe((data:any)=>{
           this.spinner = data
-       })  
+       }) 
+       this._spinner.header_control.next(false) 
   }
 
   ngOnInit(): void {

@@ -1,0 +1,57 @@
+
+<h2 mat-dialog-title>Add Loan</h2>
+<mat-dialog-content class="mat-typography">
+    <form action="" #form="ngForm" >
+        <div class="d-flex">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <mat-form-field appearance="outline" class="mr-3 d-none">
+                        <mat-label>Id</mat-label>
+                        <input matInput name="id" [(ngModel)]="id">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="mr-3">
+                        <mat-label>Title</mat-label>
+                        <input matInput name="title" [(ngModel)]="title">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="mr-3">
+                        <mat-label>Interest Rate</mat-label>
+                        <input matInput name="interest_rate" [(ngModel)]="interest_rate">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="mr-3">
+                        <mat-label>Loan Type</mat-label>
+                        <input matInput name="loan_type" [(ngModel)]="loan_type">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="mr-3">
+                        <mat-label>Processing Fee</mat-label>
+                        <input matInput name="processing_fee" [(ngModel)]="processing_fee">
+                    </mat-form-field>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <mat-form-field appearance="outline" class="mr-3">
+                        <mat-label>Choose Bank</mat-label>
+                        <mat-select [(ngModel)]="bank" name="bank">
+                            <mat-option *ngFor="let bank of banks" [value]="bank.id">{{bank.bank_name}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    
+                    
+                    <mat-form-field appearance="outline" class="mr-3">
+                        <mat-label>Tenure Range</mat-label>
+                        <input matInput name="tenure_range" [(ngModel)]="tenure_range">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="mr-3">
+                        <mat-label>Upload Card Image</mat-label>
+                       <input matInput readonly name="upload_file" [(ngModel)]="upload_file">
+                       <button matSuffix mat-raised-button color="accent" (click)="upload.click()">Browse File</button>
+                    </mat-form-field>
+                    <input type="file" name="main_upload" #upload class="d-none" (change)="file_change($event)">
+                </div>
+            </div>           
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button mat-dialog-close color="primary" (click)="add_data(form.value)" *ngIf="save_btn">Save</button>
+  <button mat-raised-button mat-dialog-close color="primary" (click)="update_data(form.value)" *ngIf="update_btn">Update</button>
+</mat-dialog-actions>

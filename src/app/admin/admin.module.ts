@@ -14,6 +14,21 @@ import { BankComponent } from './bank/bank.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { AdddialogComponent } from './bank/adddialog/adddialog.component';
 import { InterestComponent } from './bank/interest/interest.component';
+import { Config } from '../config/config';
+import { AuthGuard } from '../auth.guard';
+import { LoanComponent } from './loan/loan.component';
+import { CreditComponent } from './credit/credit.component';
+import { SavingsComponent } from './savings/savings.component';
+import { InvestmentComponent } from './investment/investment.component';
+import { MutualComponent } from './mutual/mutual.component';
+import { DematComponent } from './demat/demat.component';
+import { CryptoComponent } from './crypto/crypto.component';
+import { FixedComponent } from './fixed/fixed.component';
+import { AddCreditDialogComponent } from './add-credit-dialog/add-credit-dialog.component';
+import { AddSavingsDialogComponent } from './add-savings-dialog/add-savings-dialog.component';
+import { AddLoanDialogComponent } from './add-loan-dialog/add-loan-dialog.component';
+import { AddLoanTypeDialogComponent } from './add-loan-type-dialog/add-loan-type-dialog.component';
+import { LoanTypeComponent } from './loan-type/loan-type.component';
 @NgModule({
   declarations: [
     LoginComponent,
@@ -25,14 +40,28 @@ import { InterestComponent } from './bank/interest/interest.component';
     BankComponent,
     DialogComponent,
     AdddialogComponent,
-    InterestComponent
+    InterestComponent,
+    LoanComponent,
+    CreditComponent,
+    SavingsComponent,
+    InvestmentComponent,
+    MutualComponent,
+    DematComponent,
+    CryptoComponent,
+    FixedComponent,
+    AddCreditDialogComponent,
+    AddSavingsDialogComponent,
+    AddLoanDialogComponent,
+    AddLoanTypeDialogComponent,
+    LoanTypeComponent
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
   ],
+  providers: [AuthGuard, Config],
   bootstrap: [AdminComponent]
 })
 export class AdminModule { }
